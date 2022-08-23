@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    min-height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+#table-div {
+    min-height: 110vh;
+    width: 100vw;
+    border: 1px solid transparent;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+#nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#left {
+    width: 8vw;
+    height: 6vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#left .logonav {
+    height: 30vh;
+    width: 150%;
+}
+
+#right {
+    width: 30vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#right a {
+    font-size: 1.5vw;
+    color: white;
+}
+
+#right .nava:hover {
+    color: skyblue;
+}
+
+#tcontent {
+    display: flex;
+}
+
+#tcontent #content {
+    color: white;
+    margin-top: 5vh;
+    margin-left: 3vw;
+    font-size: 1.5vw;
+    width: 25vw;
+}
+
+.waviy {
+    position: relative;
+    width: 40vw;
+}
+
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 4vw;
+    color: #fff;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+#content p {
+    width: 17vw;
+    margin-top: 3vh;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60vw;
+    min-height: 60vh;
+    font-size: 1vw;
+    border: 0.1vw solid white;
+    padding: 1vw;
+    text-align: left;
+    margin-left: 8.5vw;
+    margin-top: 22.5vh;
+}
+
+th {
+    background-color: orange;
+    color: white;
+}
+
+tr:nth-child(odd) {
+    background-color: #ededed;
+}
+
+tr:nth-child(odd):hover {
+    color: white;
+    background-color: initial;
+}
+
+tr:nth-child(even) {
+    color: white;
+}
+
+.auto{
+    overflow: auto;
+}
+
+
+
+@media only screen and (max-width: 500px) {
+
+    #tcontent {
+        flex-direction: column;
+    }
+
+    #content {
+        padding-left: 5vw;
+    }
+
+    .waviy{
+        width: 70vw;
+    }
+
+    .waviy span {
+        font-size: 5vw;
+    }
+
+    #content p {
+        font-size: 2vw;
+        width: 50vw;
+    }
+
+    #left {
+        width: 25vw;
+        height: 5vh;
+    }
+
+    #table-div #nav #right {
+        margin-right: 4vw;
+    }
+
+    #left .logonav {
+        width: 120%;
+    }
+
+    table {
+        min-height: 45vh;
+        width: 80vw;
+        font-size: 1.7vw;
+    }
+}
